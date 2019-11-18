@@ -29,4 +29,38 @@ public class MenuItem {
     public void setThisIsNew(boolean thisIsNew) {
         this.thisIsNew = thisIsNew;
     }
-}
+
+    public float getPrice() {
+        return price;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public boolean getThisIsNew() {
+        return thisIsNew;
+    }
+
+    public String toString() {
+        return "Item: " + description + ", Category: " + category + ", Price: " + price + ", New(y/n): " + (thisIsNew ? "Y" : "N");
+    }
+
+    public boolean equals(Object item) {
+        if(item == this) {
+            return true;
+        }
+        if(item == null) {
+            return false;
+        }
+        if(item.getClass() != getClass()) {
+            return false;
+        }
+        MenuItem theItem = (MenuItem)item;
+        return theItem.price == price && theItem.description.equals(description) && theItem.category.equals(category);
+    }
+ }
