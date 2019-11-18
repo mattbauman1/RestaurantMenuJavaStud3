@@ -14,5 +14,19 @@ public class MenuItem {
         this.thisIsNew = thisIsNew;
     }
 
+    public void setPrice(float price) {
+        this.price = price;
+    }
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public void setThisIsNew(boolean thisIsNew) {
+        this.thisIsNew = thisIsNew;
+    }
 }
